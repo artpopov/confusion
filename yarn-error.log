@@ -1,0 +1,46 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-elements
+
+PATH: 
+  C:\ORANT\bin;C:\app\user\product\11.2.0\client_1\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\ORANT\jdk\bin;C:\windows\System32\OpenSSH\;C:\apache24\bin\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Users\PopovArAn\AppData\Local\Microsoft\WindowsApps;C:\Users\PopovArAn\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\PopovArAn\AppData\Local\Programs\Git\cmd;C:\Program Files\heroku\bin;C:\Users\PopovArAn\AppData\Roaming\npm;C:\Users\PopovArAn\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  13.1.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\PopovArAn\Desktop\myprojects\coursera\lesson2\confusion\node_modules\@react-native-community\cli\node_modules\node-fetch\lib'
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "expo": "^35.0.0",
+      "react": "16.8.3",
+      "react-dom": "16.8.3",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+      "react-native-web": "^0.11.7"
+    },
+    "devDependencies": {
+      "babel-preset-expo": "^7.1.0"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
