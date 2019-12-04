@@ -8,9 +8,7 @@ export const fetchComments = () => dispatch => {
         if (response.ok) {
           return response;
         } else {
-          const error = new Error(
-            "Error" + response.status + ": " + response.statusText
-          );
+          const error = new Error("Error" + response.status + ": " + response.statusText);
           error.response = response;
           throw error;
         }
@@ -43,9 +41,7 @@ export const fetchDishes = () => dispatch => {
         if (response.ok) {
           return response;
         } else {
-          const error = new Error(
-            "Error" + response.status + ": " + response.statusText
-          );
+          const error = new Error("Error" + response.status + ": " + response.statusText);
           error.response = response;
           throw error;
         }
@@ -82,9 +78,7 @@ export const fetchPromos = () => dispatch => {
         if (response.ok) {
           return response;
         } else {
-          const error = new Error(
-            "Error" + response.status + ": " + response.statusText
-          );
+          const error = new Error("Error" + response.status + ": " + response.statusText);
           error.response = response;
           throw error;
         }
@@ -121,9 +115,7 @@ export const fetchLeaders = () => dispatch => {
         if (response.ok) {
           return response;
         } else {
-          const error = new Error(
-            "Error" + response.status + ": " + response.statusText
-          );
+          const error = new Error("Error" + response.status + ": " + response.statusText);
           error.response = response;
           throw error;
         }
@@ -150,4 +142,31 @@ export const leadersLoading = () => ({
 export const leadersFailed = errmess => ({
   type: ActionTypes.LEADERS_FAILED,
   payload: errmess
+});
+
+export const postFavorite = dishId => dispatch => {
+  setTimeout(() => {
+    dispatch(addFavorite(dishId));
+  }, 2000);
+};
+
+export const addFavorite = dishId => ({
+  type: ActionTypes.ADD_FAVORITE,
+  payload: dishId
+});
+
+export const postComment = (dishId, rating, author, comment) => dispatch => {
+  setTimeout(() => {
+    dispatch(addComment(dishId, rating, author, comment));
+  }, 2000);
+};
+
+export const addComment = dishId => ({
+  type: ActionTypes.ADD_COMMENT,
+  payload: dishId
+});
+
+export const deleteFavorite = dishId => ({
+  type: ActionTypes.DELETE_FAVORITE,
+  payload: dishId
 });
