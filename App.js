@@ -6,6 +6,7 @@ import { PersistGate } from "redux-persist/es/integration/react";
 import { Loading } from "./components/LoadingComponent";
 
 const { persistor, store } = ConfigureStore();
+persistor.purge();
 
 export default function App() {
   return (
@@ -16,3 +17,10 @@ export default function App() {
     </Provider>
   );
 }
+
+// var sharedBlacklist = [
+//   /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
+//   /website\/node_modules\/.*/,
+//   /heapCapture\/bundle\.js/,
+//   /.*\/__tests__\/.*/
+// ];

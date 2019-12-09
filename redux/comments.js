@@ -8,8 +8,10 @@ export const comments = (
   action
 ) => {
   switch (action.type) {
-    case ActionTypes.ADD_COMMENTS:
-      return { ...state, errMessage: null, comments: state.comments.concat(action.payload) };
+    case ActionTypes.ADD_COMMENTS: {
+      console.log(action.payload);
+      return { errMessage: null, comments: state.comments.concat(action.payload) };
+    }
 
     case ActionTypes.COMMENTS_FAILED:
       return { ...state, errMessage: action.payload, comments: [] };

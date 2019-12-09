@@ -7,13 +7,15 @@ import { promotions } from "./promotions";
 import { leaders } from "./leaders";
 import { favorites } from "./favorites";
 import { persistStore, persistCombineReducers } from "redux-persist";
-import storage from "redux-persist/es/storage";
+//import storage from "redux-persist/es/storage";
 import { TabRouter } from "react-navigation";
+//import AsyncStorage from "@react-native-community/async-storage";
+import { AsyncStorage } from "react-native";
 
 export const ConfigureStore = () => {
   const config = {
     key: "root",
-    storage,
+    storage: AsyncStorage,
     debug: TabRouter
   };
   const store = createStore(
